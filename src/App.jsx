@@ -1,56 +1,66 @@
 import './App.css'
 
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import '../src/assets/calling.png'
+import '../src/assets/email.png'
+
+
 function App() {
   return (
     <div className="portfolio">
-          <h1 className='main_header'>Omkar Shinde</h1>
-          <h3 className='secondary_head'>Welcome to my Portfolio!</h3>
-          
-        <div className='summary'>
-          <h2>Summary</h2>
-          <p>
-            Software Engineer-in-training with 4+ years of experience in troubleshooting cloud-based systems, with hands-on development experience in Ruby, Python and JavaScript. Fast learner who takes ownership,contributes from day one, and is driven to grow into a software or data engineering role.
-          </p>
-        </div>
-
-        <div className='skill'>
-          <h2>Skills</h2>
-          <ul>
-            <li>Programming Languages: Ruby, C++, Python, JavaScript.</li>
-            <li>AWS Services: EC2, AWS CloudWatch Logs, IAM, S3, CloudFront, Route 53, Certificate Manager, Dynamo DB.</li>
-            <li>Frameworks: React (Node Js), Ruby on Rails, Express Js (WebAPI).</li>
-            <li>Database: MySQL, PostgreSQL.</li>
-            <li>DevOps Tools: Jenkins CI/CD, Maven, Terraform, Docker, Kubernetes, Ansible, Git/ GitHub, Visual Studio Code, Prometheus, Grafana, JIRA.</li>
-          </ul>
-        </div>
-
-        <div className='project'>
-          <h2>Project</h2>
-            <h4>NetScan (In progress):</h4>
+      <Navbar />
+      <h1 className='main_header'>Omkar Shinde</h1>
+      <h2 className='secondary_head'> AWS - SA certified | Azure certified | Terraform JavaScript | PowerShell scripting | CKA certified | Dockers | Ansible | GitHub | Python</h2>
+      <div className='about'>
+        <p>
+          Software Engineer-in-training with 4+ years of experience in troubleshooting cloud-based systems, with hands-on development experience in Ruby, Python and JavaScript. Fast learner who takes ownership,contributes from day one, and is driven to grow into a software or data engineering role.
+        </p>
+      </div>
+      <div className='skill'>
+        <h2 className='header' >Skills</h2>
+        <ul>
+          <li>Programming Languages: Ruby, C++, Python, JavaScript.</li>
+          <li>AWS Services: EC2, AWS CloudWatch Logs, IAM, S3, CloudFront, Route 53, Certificate Manager, Dynamo DB.</li>
+          <li>Frameworks: React (Node Js), Ruby on Rails, Express Js (WebAPI).</li>
+          <li>Database: MySQL, PostgreSQL.</li>
+          <li>DevOps Tools: Jenkins CI/CD, Maven, Terraform, Docker, Kubernetes, Ansible, Git/ GitHub, Visual Studio Code, Prometheus, Grafana, JIRA.</li>
+        </ul>
+      </div>
+      <div className='project'>
+        <h2 className='header' >Projects</h2>
+        <div className="tile-container">
+          <div className="tile">
+            <h4 className='pro_head'>NetScan (In progress):</h4>
             <ul>
               <li>Built a code to scan the devices in the Network, using Python modules.</li>
               <li>Leveraging GitHub for versioning.</li>
               <li>Express.js (JavaScript) for WebAPI.</li>
               <li>React.js (HTML/ CSS/ JavaScript) for UI.</li>
             </ul>
-            <h4>Roadmap(future implementation)</h4>
-            <ul>
-              <li>Integration with AI.</li>
-              <li>Signup user with an ⁠ existing Gmail account with Firebase.</li>
-            </ul>
-
-
-            <h4>HR Mintra⁠</h4>
-            <ul>
-              <li>Developed a Web application with Ruby on Rails.</li>
-              <li>Built a docker image to containerize the app</li>
-              <li>Hosted on EC2 with ALB and Clouldfront, registered the domain</li>
-            </ul>
-        </div>
-
-
+            <h4 className='pro_head'>Roadmap(future implementation)</h4>
+              <ul>
+                <li>Integration with AI.</li>
+                <li>Signup user with an ⁠ existing Gmail account with Firebase.</li>
+              </ul>
+            <button className="view">View Project</button>
+            </div>
+            <div className="tile">
+              <h4 className='pro_head'>HR Mintra⁠</h4>
+              <ul>
+                <li>Developed a Web application with Ruby on Rails.</li>
+                <li>Built a docker image to containerize the app</li>
+                <li>Hosted on EC2 with ALB and Clouldfront, registered the domain</li>
+              </ul>
+              <button className="view">View Project</button>
+            </div>
+          </div>
+          <div className="more_pro">
+            <button className="view">More Projects</button>
+          </div>
+      </div>
         <div className='education'>
-          <h2>Education</h2>
+        <h2 className='header'>Education</h2>
           <p>
             Bachelors of Computer Information System - University of the Fraser Valley
             2016/06 – 2020/06
@@ -65,7 +75,7 @@ function App() {
         </div>
 
         <div className='certs'>
-          <h2>Certificate</h2>
+          <h2 className='header'>Certificate</h2>
           <ul>
             <li>AWS Certified Solution Architect - Associate AWS SAA03 (EC2, SQS, S3, Certificate Manager, RDMS, Dynamo DB, CloudWatch etc)</li> 
             <li>Certified Kubernetes Administrator</li>
@@ -75,7 +85,7 @@ function App() {
         </div>
 
         <div className='experience'>
-          <h2>Professional Experience</h2>
+          <h2 className='header'>Professional Experience</h2>
           <h4>IT Glue</h4>
           <p>Premium Customer Support - L2 2022/10 – present | Vancouver, Canada</p>
           <ul>
@@ -111,7 +121,9 @@ function App() {
             <li>Provided hands-on technical support, ensuring the uptime and reliability of internal and customer-facing systems.</li>
           </ul>
         </div>
-      </div>
+        <Footer />
+    </div>
+
   )
 }
 
