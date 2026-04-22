@@ -5,8 +5,28 @@ import Footer from './components/Footer/Footer';
 import '../src/assets/calling.png'
 import '../src/assets/email.png'
 
+function openSkill(evt, Skills){
 
+  var i, tabcontent,tabs_head;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i=0; i < tabcontent.length; i++){
+    tabcontent[i].style.display = "none";
+  }
+
+  tabs_head = document.getElementsByClassName("tabs_head");
+  for (i = 0; i < tabs_head.length; i++) {
+    tabs_head[i].className = tabs_head[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(Skills).style.display = "block";
+  evt.target.className += " active";
+  console.log(evt.target);
+
+}
 function App() {
+
   return (
     <div className="portfolio" >
       <Navbar />
@@ -19,13 +39,30 @@ function App() {
       </div>
       <div className='skill'>
         <h2 className='header' >Skills</h2>
-        <ul>
-          <li>Programming Languages: Ruby, C++, Python, JavaScript.</li>
-          <li>AWS Services: EC2, AWS CloudWatch Logs, IAM, S3, CloudFront, Route 53, Certificate Manager, Dynamo DB.</li>
-          <li>Frameworks: React (Node Js), Ruby on Rails, Express Js (WebAPI).</li>
-          <li>Database: MySQL, PostgreSQL.</li>
-          <li>DevOps Tools: Jenkins CI/CD, Maven, Terraform, Docker, Kubernetes, Ansible, Git/ GitHub, Visual Studio Code, Prometheus, Grafana, JIRA.</li>
-        </ul>
+        <div className="tab">
+        <div className="cat">
+          <button className="tabs_head" onClick={() => openSkill(event, 'lang')}>Programming Languages</button>
+          <button className="tabs_head" onClick={() => openSkill(event, 'cloud')}>Cloud Computing</button>
+          <button className="tabs_head" onClick={() => openSkill(event, 'fw')}>Frameworks</button>
+          <button className="tabs_head" onClick={() => openSkill(event, 'db')}>Database</button>
+          <button className="tabs_head" onClick={() => openSkill(event, 'devops')}>DevOps tools</button>
+        </div>
+        <div id='lang' className="tabcontent">
+          <p>Ruby, C++, Python, JavaScript.</p>
+        </div>
+        <div id='cloud' className="tabcontent">
+          <p>EC2, AWS CloudWatch Logs, IAM, S3, CloudFront, Route 53, Certificate Manager, Dynamo DB.</p>
+        </div>
+        <div id='fw' className="tabcontent">
+          <p>React (Node Js), Ruby on Rails, Express Js (WebAPI).</p>
+        </div>
+        <div id='db' className="tabcontent">
+          <p>MySQL, PostgreSQL.</p>
+        </div>
+        <div id='devops' className="tabcontent">
+          <p>Jenkins CI/CD, Maven, Terraform, Docker, Kubernetes, Ansible, Git/ GitHub, Visual Studio Code, Prometheus, Grafana, JIRA.</p>
+        </div>
+        </div>
       </div>
       <div className='project'>
         <h2 className='header' >Projects</h2>
@@ -44,34 +81,36 @@ function App() {
                 <li>Signup user with an ⁠ existing Gmail account with Firebase.</li>
               </ul>
             <button className="view">View Project</button>
-            </div>
-            <div className="tile">
-              <h4 className='pro_head'>HR Mintra⁠</h4>
-              <ul>
-                <li>Developed a Web application with Ruby on Rails.</li>
-                <li>Built a docker image to containerize the app</li>
-                <li>Hosted on EC2 with ALB and Clouldfront, registered the domain</li>
-              </ul>
-              <button className="view">View Project</button>
-            </div>
           </div>
-          <div className="more_pro">
-            <button className="view">More Projects</button>
+          <div className="tile">
+            <h4 className='pro_head'>HR Mintra⁠</h4>
+            <ul>
+              <li>Developed a Web application with Ruby on Rails.</li>
+              <li>Built a docker image to containerize the app</li>
+              <li>Hosted on EC2 with ALB and Clouldfront, registered the domain</li>
+            </ul>
+            <button className="view">View Project</button>
           </div>
+        </div>
+        <div className="more_pro">
+          <button className="view">More Projects</button>
+        </div>
       </div>
         <div className='education'>
           <h2 className='header'>Education</h2>
-          <p>
-            Bachelors of Computer Information System - University of the Fraser Valley
-            2016/06 – 2020/06
+          <div className="edu_des">
+            <p>
+              Bachelors of Computer Information System - University of the Fraser Valley
+              2016/06 – 2020/06
 
-            Abbotsford, Canada
-          </p>
-          <p>
-            Concept:
+              Abbotsford, Canada
+            </p>
+            <p>
+              Concept:
 
               Operating System, Software Management Life Cycle, Security, Object-Oriented Design, Relational Databases, Data Structures and Algorithms.
-          </p>
+            </p>
+          </div>
         </div>
 
         <div className='certs'>

@@ -1,6 +1,8 @@
 * {
-    margin: 0;
-    padding: 0;
+    max-width: 1200px; /* Limits the width */
+    margin: 0 auto;    /* Centers the layout */
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .portfolio {
@@ -94,6 +96,45 @@
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
+.tab{
+    margin: 2rem 2rem;
+    text-align: center;
+}
+.cat {
+    display: inline-block;
+    width: 100%;
+    background-color: inherit;
+}
+
+.cat button {
+    border: 3px solid white;
+    margin: 0.2rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: medium;
+    font-weight: bold;
+    color: #fff;
+}
+
+.cat button:hover {
+  transform: scale(1.05) ;
+}
+
+.cat button.active {
+    background-color: rgba(255, 255, 255, 0.712);
+}
+
+.tabcontent {
+    display: none;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border-top: none;
+    background-color: black;
+}
+
 .project .pro_head {
     margin: 1rem;
     color: #65000b;
@@ -117,6 +158,8 @@
 }
 
 .project .tile .view {
+    display: flex;
+    justify-content: center;
     background-color: #910112;
     border-width: 0;
     border-radius: 8px;
@@ -138,16 +181,19 @@
 }
 
 .project .more_pro {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    margin: 2rem;
 }
 
-.more_pro .view {
-    background-color: transparent;
+.more_pro .view {  
+    background-color: rgba(255, 255, 255, 0.4);
     transition-duration: 0.4s;
     border-width: 2px;
-    border-color: black;
+    border: 2px solid white;
     border-radius: 8px;
-    padding: 10px 40px;
+    padding: 10px 80px;
     font-weight: bold;
     color: #fff;
 }
@@ -163,15 +209,15 @@
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.education p {
+.education .edu_des {
     background-image:-webkit-linear-gradient(right ,rgb(88, 84, 84) 5%,black 45%);
     font-size: 20px;
-    margin: 1rem 1rem;
+    margin: 2rem 2rem;
     border-radius: 4px;
     border-color: black;
 }
 
-.education p:hover {
+.education .edu_des:hover {
     transform: scale(1.05);
 }
 
