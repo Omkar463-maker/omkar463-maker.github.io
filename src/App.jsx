@@ -115,12 +115,14 @@ function App() {
 
         <div className='certs'>
           <h2 className='header'>Certificate</h2>
-          <ul>
-            <li>AWS Certified Solution Architect - Associate AWS SAA03 (EC2, SQS, S3, Certificate Manager, RDMS, Dynamo DB, CloudWatch etc)</li> 
-            <li>Certified Kubernetes Administrator</li>
-            <li>Microsoft Certified: DevOps Engineer Expert</li>
-            <li>AZ-104 Microsoft Azure Administrator</li>
-          </ul>
+          <div className="cert_content">
+            <ul>
+              <li><button>AWS Certified Solution Architect - Associate AWS SAA03</button></li> 
+              <li><button>Certified Kubernetes Administrator</button></li>
+              <li><button>Microsoft Certified: DevOps Engineer Expert</button></li>
+              <li><button>AZ-104 Microsoft Azure Administrator</button></li>
+            </ul>
+          </div>
         </div>
         <div className='experience'>
           <h2 className='header'>Professional Experience</h2>

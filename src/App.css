@@ -1,7 +1,6 @@
 * {
-    max-width: 1200px; /* Limits the width */
-    margin: 0 auto;    /* Centers the layout */
-    padding: 0 20px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -212,6 +211,7 @@
 .education .edu_des {
     background-image:-webkit-linear-gradient(right ,rgb(88, 84, 84) 5%,black 45%);
     font-size: 20px;
+    padding: 14px 15px;
     margin: 2rem 2rem;
     border-radius: 4px;
     border-color: black;
@@ -222,11 +222,44 @@
 }
 
 .cert {
+    align-items: center;
+    justify-content: space-between;
     border-top: 2px solid rgba(255, 255, 255, 0.2);
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
 
 }
+
+.cert_content {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.cert_content li {
+    margin-right: 1rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: none;
+}
+
+.cert_content button{
+    margin: 1rem 1rem;
+    padding: 14px 16px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid white;
+    border-radius: 2rem;
+    transform: 0.6s;
+    font-size: medium;
+    color: white;
+}
+
+.cert_content button:hover {
+    transform: scale(1.05);
+}
+
 .experience {
     border-top: 2px solid rgba(255, 255, 255, 0.2);
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
@@ -300,6 +333,7 @@
 
 
 .duties {
+    padding: 14px 12px;
     background-color: black;
     color: #fff;
     transform: rotateY(180deg);
