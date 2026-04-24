@@ -331,10 +331,61 @@
     text-align: center;
 }
 
-
 .duties {
     padding: 14px 12px;
     background-color: black;
     color: #fff;
     transform: rotateY(180deg);
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 2rem;
+    border-radius: 2rem;
+    background-color:rgba(255, 255, 255, 0.4);
+}
+
+.field {
+    margin: 2rem 2rem;
+
+}
+.field label {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.field input {
+    border: none;
+    margin-bottom: 2rem;
+    padding: 10px 90px;
+    border-radius: 2rem;
+}
+
+.field textarea {
+    border: none;
+    padding: 30px 90px;
+    border-radius: 2rem;
+}
+
+.field .submission {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.field .submission button {
+    background-image: -webkit-linear-gradient(bottom right, white, #65000b 0%);
+    border: 2px solid white;
+    border-radius: 2rem;
+    padding: 12px 40px;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    transition: 0.6s;
+}
+
+.field .submission button:hover {
+    transform: scale(1.05);
+    background-image: -webkit-linear-gradient(top right, #65000b, black 90%);
 }

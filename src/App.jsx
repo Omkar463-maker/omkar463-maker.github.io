@@ -4,6 +4,8 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import '../src/assets/calling.png'
 import '../src/assets/email.png'
+import '../src/assets/github.png'
+import '../src/assets/linkedin.png'
 
 function openSkill(evt, Skills){
 
@@ -183,6 +185,38 @@ function App() {
             </div>
           </div>
         </div>
+        <section id='form'>
+          <div className="form">
+            <form className="field">
+              <label>First Name:</label><br />
+              <input type="text" className="fname" /><br />
+              <label>Last Name:</label><br />
+              <input type="text" className="lname" /><br />
+              <label>Company:</label><br />
+              <input type="text" className='company'/><br />
+              <label>Email:</label><br />
+              <input type="text" className="email" /><br />
+              <label>Phone:</label><br />
+              <input type="text" className="phone" /><br />
+              <label>Comment:</label><br />
+              <textarea className="comment" />
+              <div className="submission">
+                <button className="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section>
+          <div className="social">
+            <h1>Contact Me</h1>
+            <ul>
+              <li><img src='../src/assets/email.png'></img>:omkarshinde4639932@gmail.com</li>
+              <li><img src='../src/assets/calling.png'></img>: +1 (236)-865-3757</li>
+              <li><a href='https://github.com/Omkar463-maker'><img src='../src/assets/github.png' /></a></li>
+              <li><a href='www.linkedin.com/in/omkar-shinde-931baa170'><img src='../src/assets/linkedin.png' /></a></li>
+            </ul>
+          </div>
+        </section>
       <Footer />
   </div>
     

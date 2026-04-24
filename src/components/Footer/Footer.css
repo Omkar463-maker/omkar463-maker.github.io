@@ -1,11 +1,11 @@
 .footer {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 12px 13px;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur();
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-
