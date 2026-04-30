@@ -25,13 +25,14 @@ function openSkill(evt, Skills){
   document.getElementById(Skills).style.display = "block";
   evt.target.className += " active";
   console.log(evt.target);
-
 }
+
 function App() {
 
   return (
     <div className="portfolio" >
       <Navbar />
+      <div className="main">
       <h1 className='main_header'>Omkar Shinde</h1>
       <h2 className='secondary_head'> AWS - SA certified | Azure certified | Terraform JavaScript | PowerShell scripting | CKA certified | Dockers | Ansible | GitHub | Python</h2>
       <div className='about'>
@@ -186,6 +187,7 @@ function App() {
           </div>
         </div>
         <section id='form'>
+          <h1 className='header'>Email me:</h1>
           <div className="form">
             <form className="field">
               <label>First Name:</label><br />
@@ -206,21 +208,38 @@ function App() {
             </form>
           </div>
         </section>
+        </div>
         <section>
           <div className="social">
-            <h1>Contact Me</h1>
-            <ul>
-              <li><img src='../src/assets/email.png'></img>:omkarshinde4639932@gmail.com</li>
-              <li><img src='../src/assets/calling.png'></img>: +1 (236)-865-3757</li>
-              <li><a href='https://github.com/Omkar463-maker'><img src='../src/assets/github.png' /></a></li>
-              <li><a href='www.linkedin.com/in/omkar-shinde-931baa170'><img src='../src/assets/linkedin.png' /></a></li>
-            </ul>
+            <div className="contact_content">
+              <ul>
+                <li><img className='email' src='../src/assets/email.png'></img>:omkarshinde4639932@gmail.com</li>
+                <li><img className='phone' src='../src/assets/calling.png'></img>: +1 (236)-865-3757</li>
+                <li><a href='https://github.com/Omkar463-maker'><img className='github' src='../src/assets/github.png' /></a></li>
+                <li><a href='www.linkedin.com/in/omkar-shinde-931baa170'><img className='linkedin' src='../src/assets/linkedin.png' /></a></li>
+              </ul>
+            </div>
+            <table className='nav'>
+              <tbody>
+                <th>Navigation</th>
+                <tr><td>Summary</td></tr>
+                <tr><td>Skills</td></tr>
+                <tr><td>Project</td></tr>
+                <tr><td>Education</td></tr>
+                <tr><td>Certificate</td></tr>
+                <tr><td>Experience</td></tr>
+              </tbody>
+              <tbody>
+                <th>Projects</th>
+                <tr><td>Network Scanner</td></tr>
+                <tr><td>HR Mintra</td></tr>
+                <tr><td>Monitoring App</td></tr>
+              </tbody>
+            </table>
           </div>
         </section>
       <Footer />
-  </div>
-    
-
+    </div>
   )
 }
 
