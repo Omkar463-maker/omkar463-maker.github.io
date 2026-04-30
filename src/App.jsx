@@ -219,6 +219,7 @@ function App() {
                 <li><a href='www.linkedin.com/in/omkar-shinde-931baa170'><img className='linkedin' src='../src/assets/linkedin.png' /></a></li>
               </ul>
             </div>
+            <div className="foot_cont">
             <table className='nav'>
               <tbody>
                 <th>Navigation</th>
@@ -236,6 +237,7 @@ function App() {
                 <tr><td>Monitoring App</td></tr>
               </tbody>
             </table>
+            </div>
           </div>
         </section>
       <Footer />

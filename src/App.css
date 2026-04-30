@@ -10,7 +10,7 @@
 
 .main {
     width: 100%;
-    max-width: 908px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20x;
     box-sizing: border-box;
@@ -428,6 +428,11 @@
 .contact_content .linkedin {
     width: 40px;
     height: 40px;
+}
+
+.foot_cont {
+    display: flex;
+    justify-content: center;
 }
 
 .nav {
