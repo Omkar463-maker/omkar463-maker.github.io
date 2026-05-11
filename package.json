@@ -1,14 +1,14 @@
 {
-  "name": "my_portfolio",
+  "name": "omkar463-maker.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://omkar463-maker.github.io/",
   "scripts": {
-    "predeploy":"npm run build",
+    "build": "vite build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
