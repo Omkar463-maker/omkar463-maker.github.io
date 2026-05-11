@@ -5,6 +5,7 @@
   "type": "module",
   "homepage": "https://omkar463-maker.github.io/my_portfolio",
   "scripts": {
+    "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
